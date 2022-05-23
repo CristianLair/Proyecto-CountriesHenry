@@ -1,0 +1,26 @@
+.addActivity{
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    color:black;
+    padding: 10px;
+    margin: 3px;
+    border: 3px solid black;
+    transition: .1s;
+}
+
+.addActivity:hover{
+    background-color: black;
+    color: white;
+}
+
+.navContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    padding-top: 4px;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+    background-color: rgb(85, 85, 85);
+}

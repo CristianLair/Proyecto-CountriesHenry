@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+.container{
+    font-family: 'Roboto Mono', monospace;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255);
+}
+
+.container > input{
+    margin: 20px;
+    padding: 10px;
+}
+
+.container > label{
+    color: black;
+}
+
+.container > button{
+    padding: 15px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px black;
+    transition: 0.2s;
+}
+
+.container > button:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.container > button:active{
+    transform: scale(0.95);
+}
+
+
+.container > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container > span{
+    color: rgb(255, 255, 255);
+    background-color: red;
+    font-size: 13px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.container > select{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 93%;
+}
+
+.container > select > option{
+    color: black;
+    background-color: grey;
+}
+
+.contenedorBuscador{
+    background-color: rgb(136, 136, 136);
+    font-size: 18px;
+}
+
+.contenedorPaises{
+    background-color: rgb(181, 181, 181);
+    font-size: 18px;
+}
+
+.contenedorPaises > div > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contenedorPaises li{
+    background-color: rgb(114, 112, 112);
+    border: 1px solid black;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.lista{
+    display: block;
+    margin-left: -40px;
+    list-style: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+}
+
+.lista > li > button{
+    border: none;
+}
+
+hr{
+    border: none;
+}
+
+.addButton{
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid black;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: .1s;
+}
+
+.addButton:hover{
+    background-color: rgb(213, 213, 213);   
+}
+
+.button{
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    color:black;
+    padding: 10px;
+    margin: 3px;
+    border: 3px solid black;
+    transition: .1s;
+}
+
+.button:hover{
+    background-color: black;
+    color: white;
+}
+
+.deleteCountry{
+    cursor: pointer;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.deleteCountry:hover{
+    background-color: rgb(213, 213, 213);
+}

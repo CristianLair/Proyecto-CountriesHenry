@@ -1,0 +1,26 @@
+.card{
+    display: inline-block;
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.03);
+}
+
+.card:active{
+    transform: translateY(-10px);
+}
+
+.card > p{
+    text-align: center;
+    color: black;
+    font-size: 18px;
+}
+
+.card > img{
+    border-radius: 5px;
+    border: solid 2px black;
+}
