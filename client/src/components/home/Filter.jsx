@@ -22,7 +22,7 @@ export default function Filter() {
       }
     }
     cargarActividades()
-  }, [])
+  }, [dispatch])
 
 
   return (

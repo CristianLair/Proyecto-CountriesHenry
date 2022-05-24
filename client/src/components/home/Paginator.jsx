@@ -41,7 +41,7 @@ export default function Paginator() {
       top: '0px' 
     }); */
     document.title = "Countries página " + currentPage;
-  }, [currentPage]);
+  }, [currentPage, dispatch]);
 
   useEffect(()=>{
       if(filtradoUOrdenado){
@@ -49,7 +49,7 @@ export default function Paginator() {
         dispatch(loadingState(false))
         dispatch(filterAndOrder(false))
       }
-  }, [filtradoUOrdenado])
+  }, [filtradoUOrdenado,dispatch])
 
   return (
     <>

@@ -147,7 +147,7 @@ export default function Activity() {
     }
 
     
-    function deleteCountry(event, countryID){//recibo el id del pais a borrar
+    function deleteCountry(event, countryID){// prueba desde front como es un delete. A integrar post PI correction
         console.log(countryID);
         setInput(prev => {
             return {
@@ -159,7 +159,7 @@ export default function Activity() {
 
     useEffect(()=>{
         document.title = "Agregar actividad";
-    }, [])
+    }, [dispatch])
     
     return (
       <>

@@ -15,7 +15,7 @@ export default function CountryDetail() {
     return function (){
       dispatch(clearDetail())
     }
-  },[])
+  },[dispatch])
 
   try {
     return (

@@ -21,7 +21,7 @@ export default function LandingPage() {
       <br />
       <Link className={style.boton} to='/home'>Explore!</Link>
       <br />
-      <a className={style.copyright} href="https://www.wendyperrin.com/" target="_blank" rel="noreferrer">Imagen extraída de wendyperrin</a>
+      
     </div>
   )
 }
