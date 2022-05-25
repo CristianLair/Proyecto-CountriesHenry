@@ -54,5 +54,19 @@ route.get('/', async (req, res) => {
 
     res.send(array);
 })
+route.delete('/:name', async (req, res) => {//Prueba de logica del delet
+    const { name } = req.params;
+    try {
+        await Activity.destroy({    
+            where: {
+                name
+            }
+        })
+        res.status(204).json({res: 'Actividad ´' + name + '´ borrada!'})
+        console.log('Actividad ´' + name + '´ borrada!');
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 module.exports = route;

@@ -87,7 +87,7 @@ export default function Activity() {
 
         if(input.name.length <= 2) valid = false
 
-        if(input.dificultad === 0) valid = false
+        if(input.dificultad === 0 || input.dificultad < 5) valid = false
 
         if(input.duracion === 0) valid = false
 
@@ -172,7 +172,14 @@ export default function Activity() {
             {error.name.length ? <span>{error.name}</span> : null }
 
             <label htmlFor="dificultad">Dificultad de la actividad (1 - 5):</label>
-            <input type="number" min='0' name="dificultad" id="dificultad" placeholder='Ingresa una dificultad' value={input.dificultad} onChange={handleChange} />
+            <select name="dificultad" id="dificultad" value={input.dificultad} onChange={handleChange}>
+                <option value="seleccionar">Seleccionar...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
             {error.dificultad.length ? <span>{error.dificultad}</span> : null }
 
             <label htmlFor="duracion">Duración de la actividad (0 - 2000 horas):</label>
