@@ -47,7 +47,7 @@ export default function Activity() {
             case 'dificultad':{
                 setError({
                     ...error,
-                    dificultad: 'seleccionar' ? 'La dificultad varía entre 1 y 5' : '' 
+                    dificultad: value === 'seleccionar' ? 'La dificultad varía entre 1 y 5' : '' 
                 })
                 break;
             }
