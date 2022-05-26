@@ -16,7 +16,7 @@ export default function Paginator() {
   const data = useSelector(state => state.countries);
   const loading = useSelector(state => state.loading);
   const filtradoUOrdenado = useSelector(state => state.applyFilterAndOrder)
-  
+ 
   const [currentPage, setCurrentPage] = useState(1);
   const dispatch = useDispatch();
 
@@ -31,7 +31,7 @@ export default function Paginator() {
     const newData = data.slice(startIndex, endIndex);
     return newData
   };
-
+  
   const getPaginationGroup = () => {
     return new Array(Math.ceil(data.length / 10)).fill().map((_, idx) => idx + 1)
   };
@@ -51,10 +51,7 @@ export default function Paginator() {
         dispatch(filterAndOrder(false))
       }
   }, [filtradoUOrdenado,dispatch])
-useEffect(()=>{
-  setCurrentPage(1)
 
-},[getPaginatedData().length])
   return (
     <>
       <div className={style.cardcontainer}>
