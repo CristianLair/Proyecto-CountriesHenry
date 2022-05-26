@@ -91,7 +91,7 @@ export default function Activity() {
 
         if(input.duracion === 0 || input.duracion > 2000) valid = false
 
-        if(input.temporada === '' || input.temporada === 'seleccionar') valid = false
+        if(input.temporada === '') valid = false
         
         return valid;
     }
