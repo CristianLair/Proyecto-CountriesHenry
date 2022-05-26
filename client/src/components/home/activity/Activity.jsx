@@ -87,11 +87,11 @@ export default function Activity() {
 
         if(input.name.length <= 2) valid = false
 
-        if(input.dificultad === 0 || input.dificultad < 5) valid = false
+        if(input.dificultad === 0 || input.dificultad > 5) valid = false
 
         if(input.duracion === 0 || input.duracion > 2000) valid = false
 
-        if(input.temporada === '') valid = false
+        if(input.temporada === '' || input.temporada === 'seleccionar') valid = false
         
         return valid;
     }
