@@ -28,7 +28,8 @@ export default function Paginator() {
   const getPaginatedData = () => {
     const startIndex = currentPage === 1 ? 0 : currentPage * 10 - 10;
     const endIndex = currentPage === 1 ? 9 : startIndex + 10;
-    return data.slice(startIndex, endIndex);
+    const newData = data.slice(startIndex, endIndex);
+    return newData
   };
 
   const getPaginationGroup = () => {
@@ -50,7 +51,10 @@ export default function Paginator() {
         dispatch(filterAndOrder(false))
       }
   }, [filtradoUOrdenado,dispatch])
+useEffect(()=>{
+  setCurrentPage(1)
 
+},[getPaginatedData().length])
   return (
     <>
       <div className={style.cardcontainer}>
