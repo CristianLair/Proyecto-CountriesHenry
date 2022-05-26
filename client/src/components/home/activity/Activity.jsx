@@ -183,7 +183,7 @@ export default function Activity() {
             {error.dificultad.length ? <span>{error.dificultad}</span> : null }
 
             <label htmlFor="duracion">Duración de la actividad (0 - 2000 horas):</label>
-            <input type="number" min='0' max='2001' name="duracion" id="duracion" placeholder='Ingresa una duración' value={input.duracion} onChange={handleChange} />
+            <input type="number" min='0' max='2000' name="duracion" id="duracion" placeholder='Ingresa una duración' value={input.duracion} onChange={handleChange} />
             {error.duracion.length ? <span>{error.duracion}</span> : null }
 
             <label htmlFor='temporada'>Temporada de la actividad:</label>
