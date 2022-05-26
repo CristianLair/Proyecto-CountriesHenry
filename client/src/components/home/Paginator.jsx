@@ -16,7 +16,7 @@ export default function Paginator() {
   const data = useSelector(state => state.countries);
   const loading = useSelector(state => state.loading);
   const filtradoUOrdenado = useSelector(state => state.applyFilterAndOrder)
- 
+ console.log('paginator 19', {data,loading})
   const [currentPage, setCurrentPage] = useState(1);
   const dispatch = useDispatch();
 
@@ -26,9 +26,13 @@ export default function Paginator() {
   }
 
   const getPaginatedData = () => {
+    if(data.length <= 9){
+      return data
+    }
     const startIndex = currentPage === 1 ? 0 : currentPage * 10 - 10;
     const endIndex = currentPage === 1 ? 9 : startIndex + 10;
     const newData = data.slice(startIndex, endIndex);
+    
     return newData
   };
   
